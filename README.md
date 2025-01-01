@@ -60,19 +60,19 @@ The Vivado logs will provide detailed information about the synthesis process, s
 ## Vivado Logs:
 The synthesis process in Vivado will generate logs detailing the resource usage, warnings, and errors. These logs can be reviewed to ensure the design is synthesizing correctly. The logs typically include:
 
-**Utilization Summary**: Information about the number of logic elements, LUTs (Look-Up Tables), flip-flops, and other resources used by the design.
-**Warnings/Errors**: Any issues encountered during synthesis, such as unconnected ports or mismatched signal types.
-**Timing Analysis**: Data about the timing performance of the design to ensure that it meets the FPGA’s clock constraints.
+- **Utilization Summary**: Information about the number of logic elements, LUTs (Look-Up Tables), flip-flops, and other resources used by the design.
+- **Warnings/Errors**: Any issues encountered during synthesis, such as unconnected ports or mismatched signal types.
+- **Timing Analysis**: Data about the timing performance of the design to ensure that it meets the FPGA’s clock constraints.
 
 The synth.tcl script automates the synthesis process and generates a synthesis report, providing a detailed look at the optimization and resource utilization.
 
 ## Test Scenarios:
 To verify that the system works correctly, consider testing the following scenarios:
 
-**Increment Occupancy**: Simulate a series of entries (X = 1) and confirm that the occupancy counter increases correctly.
-**Decrement Occupancy**: Simulate exits (Y = 1) and verify that the counter decreases correctly.
-**Maximum Occupancy**: Ensure that when the room reaches max_occupancy, the red indicator (Z) lights up.
-**Reset Functionality**: Test the reset functionality (reset = 1) to ensure the system returns to its initial state with the counter set to zero.
+- **Increment Occupancy**: Simulate a series of entries (X = 1) and confirm that the occupancy counter increases correctly.
+- **Decrement Occupancy**: Simulate exits (Y = 1) and verify that the counter decreases correctly.
+- **Maximum Occupancy**: Ensure that when the room reaches max_occupancy, the red indicator (Z) lights up.
+- **Reset Functionality**: Test the reset functionality (reset = 1) to ensure the system returns to its initial state with the counter set to zero.
 
 # Conclusion
 This project implements a simple yet efficient system for monitoring room occupancy using VHDL. The design is verified using ModelSim simulations and synthesized using Vivado for FPGA deployment. The synthesis results confirm that the design is optimized for minimal resource consumption, making it suitable for FPGA-based implementations.
